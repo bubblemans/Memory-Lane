@@ -15,7 +15,8 @@ import HoundifySDK
 public extension SCNNode {
     convenience init(withText text : String, position: SCNVector3) {
         self.init()
-        if text == "Negative" { return }
+        print("text       ", text)
+        if text == "Negative" || text == "AlLVIN LIN" { return }
         let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
         
         // TEXT BILLBOARD CONSTRAINT
@@ -67,10 +68,10 @@ public extension SCNNode {
         detailInfoText.chamferRadius = CGFloat(bubbleDepth)
                 
         // DETAIL NODE
-        let (minBoundDetail, maxBoundDetail) = bubble.boundingBox
+//        let (minBoundDetail, maxBoundDetail) = bubble.boundingBox
         let detailNode = SCNNode(geometry: detailInfoText)
         // Centre Node - to Centre-Bottom point
-        detailNode.pivot = SCNMatrix4MakeTranslation( (maxBoundDetail.x - minBoundDetail.x)/2, minBoundDetail.y, bubbleDepth/2)
+        detailNode.pivot = SCNMatrix4MakeTranslation( (maxBound.x - minBound.x)/2, minBound.y, bubbleDepth/2)
         // Reduce default text size
         detailNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         detailNode.simdPosition = simd_float3.init(x: 0.05, y: 0.02, z: 0)
@@ -87,10 +88,10 @@ public extension SCNNode {
         dobText.chamferRadius = CGFloat(bubbleDepth)
                 
         // DETAIL NODE
-        let (minBoundDOB, maxBoundDOB) = bubble.boundingBox
+//        let (minBoundDOB, maxBoundDOB) = bubble.boundingBox
         let dobNode = SCNNode(geometry: dobText)
         // Centre Node - to Centre-Bottom point
-        dobNode.pivot = SCNMatrix4MakeTranslation( (maxBoundDOB.x - minBoundDOB.x)/2, minBoundDOB.y, bubbleDepth/2)
+        dobNode.pivot = SCNMatrix4MakeTranslation( (maxBound.x - minBound.x)/2, minBound.y, bubbleDepth/2)
         // Reduce default text size
         dobNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         dobNode.simdPosition = simd_float3.init(x: 0.05, y: 0, z: 0)

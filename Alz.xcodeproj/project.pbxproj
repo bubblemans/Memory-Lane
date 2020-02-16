@@ -12,6 +12,8 @@
 		9D8B5D1A23F97A4C00C893D5 /* treehacks.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B5D1923F97A4B00C893D5 /* treehacks.mlmodel */; };
 		9D8B5D1C23F97B2400C893D5 /* advanced.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B5D1B23F97B2400C893D5 /* advanced.mlmodel */; };
 		9D8B5D1E23F97F0400C893D5 /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B5D1D23F97F0400C893D5 /* MedViewController.swift */; };
+		9D8B5D2023F99F8500C893D5 /* newOne.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B5D1F23F99F8400C893D5 /* newOne.mlmodel */; };
+		9D8B5D2223F9A23200C893D5 /* uniformDis.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9D8B5D2123F9A23200C893D5 /* uniformDis.mlmodel */; };
 		9DF2EF0123F7C93C007DCC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0023F7C93C007DCC26 /* AppDelegate.swift */; };
 		9DF2EF0323F7C93C007DCC26 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0223F7C93C007DCC26 /* art.scnassets */; };
 		9DF2EF0523F7C93C007DCC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0423F7C93C007DCC26 /* ViewController.swift */; };
@@ -58,6 +60,8 @@
 		9D8B5D1923F97A4B00C893D5 /* treehacks.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = treehacks.mlmodel; sourceTree = "<group>"; };
 		9D8B5D1B23F97B2400C893D5 /* advanced.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = advanced.mlmodel; sourceTree = "<group>"; };
 		9D8B5D1D23F97F0400C893D5 /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
+		9D8B5D1F23F99F8400C893D5 /* newOne.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = newOne.mlmodel; sourceTree = "<group>"; };
+		9D8B5D2123F9A23200C893D5 /* uniformDis.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = uniformDis.mlmodel; sourceTree = "<group>"; };
 		9DF2EEFD23F7C93C007DCC26 /* Alz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF2EF0023F7C93C007DCC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF2EF0223F7C93C007DCC26 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				9DF2EF3223F7CA54007DCC26 /* Face.swift */,
 				9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */,
 				9D8B5D1923F97A4B00C893D5 /* treehacks.mlmodel */,
+				9D8B5D2123F9A23200C893D5 /* uniformDis.mlmodel */,
+				9D8B5D1F23F99F8400C893D5 /* newOne.mlmodel */,
 				9D8B5D1B23F97B2400C893D5 /* advanced.mlmodel */,
 				9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */,
 				9DF2EF4423F8CF6D007DCC26 /* HoundDataCommandResult-Extras.swift */,
@@ -442,7 +448,9 @@
 				9DF2EF0523F7C93C007DCC26 /* ViewController.swift in Sources */,
 				9D8B5D1A23F97A4C00C893D5 /* treehacks.mlmodel in Sources */,
 				9D8B5D1E23F97F0400C893D5 /* MedViewController.swift in Sources */,
+				9D8B5D2023F99F8500C893D5 /* newOne.mlmodel in Sources */,
 				9DF2EF3923F7D9DA007DCC26 /* SCNNode+Text.swift in Sources */,
+				9D8B5D2223F9A23200C893D5 /* uniformDis.mlmodel in Sources */,
 				9DF2EF3B23F8541B007DCC26 /* DBInterface.swift in Sources */,
 				9DF2EF3523F7D9B6007DCC26 /* CIImage+FaceDetection.swift in Sources */,
 				9D8B5D1C23F97B2400C893D5 /* advanced.mlmodel in Sources */,

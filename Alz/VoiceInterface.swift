@@ -29,7 +29,7 @@ class VoiceInterface {
 //        let month = String(describing: (now.month)!)
 //        let day = String(describing: (now.day)!)
         
-        let inputText = "Hello, Alvin! Welcome to Alz. Today is 2020 February 15th. You are at Standford University"
+        let inputText = "Hello, Alvin! Welcome to Memory Lane. Today is 2020 February 16th. You are at Standford University"
         let textInput = TextInput(text: inputText )
         let textJson = try! JSONEncoder().encode(textInput)
         guard let url = URL(string: "https://voice.almond.stanford.edu/rest/tts") else { return }
