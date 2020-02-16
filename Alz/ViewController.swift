@@ -17,14 +17,70 @@ import HoundifySDK
 class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQueryDelegate {
     private var query: HoundVoiceSearchQuery?
     
+    @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var menuBar: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var listeningButton: UIButton!
     @IBOutlet var sceneView: ARSCNView!
+    let node = SCNNode()
     let textView = UITextView()
     let remindLabel: UILabel = {
         let label = UILabel()
         return label
     }()
+    
+   
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var medImage: UIImageView!
+    
+    @IBAction func swipeMenu(_ sender: UIPanGestureRecognizer) {
+        node.scale = SCNVector3(0, 0, 0)
+        if sender.state == .began || sender.state == .changed {
+
+            let translation = sender.translation(in: self.view).x
+            // swipe right
+            if translation > 0{
+                // swipe to the certain position
+                if menuBar.frame.minX < 0{
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.menuBar.frame.origin.x += translation / 5
+                        self.view.layoutIfNeeded()
+                    })
+                }
+            }
+
+            // swipe left
+            else{
+                // swipe to the certain position
+                if menuBar.frame.minX > -333{
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.menuBar.frame.origin.x += translation / 5
+                        self.view.layoutIfNeeded()
+                    })
+                }
+            }
+        }
+
+        // when the user is done with swiping
+        else if sender.state == .ended{
+            print("end")
+            // When the user swipe to left, make it to be swiped to the very left even though it's not be swiped enough.
+            if menuBar.frame.minX < -100{
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.menuBar.frame.origin.x = -333
+                    self.view.layoutIfNeeded()
+                })
+            }
+
+            // When the user swipe to right, make it to be swiped to clip to the margin even though it's not be swiped enough.
+            else{
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.menuBar.frame.origin.x = 0
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
+    }
     
     let model: VNCoreMLModel = try! VNCoreMLModel(for: treehacks().model)
     var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
@@ -53,38 +109,23 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         listeningButton.setTitle("Enable", for: .normal)
         listeningButton.setTitleColor(.white, for: .normal)
         
-//        if let window = UIApplication.shared.keyWindow {
-//            remindLabel.text = "Click \"Enable\" first, and click \"Speak\" to speak"
-//            remindLabel.font.withSize(6)
-//            remindLabel.numberOfLines = 2
-//            remindLabel.frame = CGRect(x: 10, y: 1000, width: 200, height: 30)
-//            remindLabel.backgroundColor = .white
-//            window.addSubview(remindLabel)
-//
-//            UIView.animate(withDuration: 0.4) {
-//                self.remindLabel.frame = CGRect(x: 10, y: 800, width: 200, height: 30)
-//            }
-//        }
         
         let text = SCNText(string: "Click \"Enable\" first, and click \"Speak\" to speak", extrusionDepth: 1)
        let material = SCNMaterial()
        material.diffuse.contents = UIColor.orange
        text.materials = [material]
        text.flatness = 0
-       text.font = .boldSystemFont(ofSize: 8)
+       text.font = .boldSystemFont(ofSize: 12)
 
-       let node = SCNNode()
        let width = Double(view.frame.width)
        let height = Double(view.frame.height)
-       node.position = SCNVector3(-0.5, -1, -1)
+       node.position = SCNVector3(-1, -1, -4)
        node.scale = SCNVector3(0.01, 0.01, 0.01)
 
        node.geometry = text
 
        sceneView.scene.rootNode.addChildNode(node)
        sceneView.automaticallyUpdatesLighting = true
-        
-        
         
         // Show statistics such as fps and timing information
 //        sceneView.showsStatistics = true
@@ -96,7 +137,47 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         sceneView.delegate = self
         sceneView.autoenablesDefaultLighting = true
         bounds = sceneView.bounds
+        
+        // menu initial position
+        self.menuBar.frame.origin.x = -333
+        self.menuBar.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        // menu buttons
+        userImage.image = UIImage(named: "user")
+        userImage.isUserInteractionEnabled = true
+//        userImage.target(forAction: #selector(handleUser), withSender: self)
+//        userImage.add
+//        userButton.setTitle("User", for: .normal)
+//        userButton.setTitleColor(.white, for: .normal)
+//        userButton.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+//        userButton.layer.cornerRadius = 15
+
+        medImage.image = UIImage(named: "drug")
+        medImage.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        medImage.addGestureRecognizer(tapGestureRecognizer)
+//        medButton.setTitle("Medicine", for: .normal)
+//        medButton.setTitleColor(.white, for: .normal)
+//        medButton.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+//        medButton.layer.cornerRadius = 15
+        
+        instructionLabel.textAlignment = .left
+        instructionLabel.lineBreakMode = .byWordWrapping
+        instructionLabel.numberOfLines = 0
+        instructionLabel.text = """
+        Instruction:
+        First, click \"Enable\" first, and click \"Speak\"to speak
+        say the name you see to find out more.
+        ex: say \"Alvin\"
+        """
     }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        // And some actions
+        print("med")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -148,7 +229,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
             searchButton.setTitle("Stop", for: .normal)
             searchButton.isEnabled = true
         } else {
-            searchButton.setTitle("Search", for: .normal)
+            searchButton.setTitle("Speak", for: .normal)
             searchButton.isEnabled = HoundVoiceSearch.instance().isListening
         }
         
