@@ -1,0 +1,28 @@
+PODS:
+  - AsyncSwift (2.0.4)
+  - HoundifyPhraseSpotter (1.9)
+  - HoundifySDK (1.9):
+    - HoundifyPhraseSpotter (~> 1.9)
+  - RxSwift (5.0.1)
+
+DEPENDENCIES:
+  - AsyncSwift
+  - HoundifySDK
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - AsyncSwift
+    - HoundifyPhraseSpotter
+    - HoundifySDK
+    - RxSwift
+
+SPEC CHECKSUMS:
+  AsyncSwift: 65775a7b32e740609b24969ece3de58723b9dc3e
+  HoundifyPhraseSpotter: a33da087104901b96fb55126ec20a2361e04100c
+  HoundifySDK: 66bddda59b7e0edcd65138de0e6ba8ecc8faca39
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+
+PODFILE CHECKSUM: b4150acc455a16f46f4c77c22189e0d04db95fae
+
+COCOAPODS: 1.8.4

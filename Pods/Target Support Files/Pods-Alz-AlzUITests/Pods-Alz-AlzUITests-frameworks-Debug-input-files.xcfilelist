@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Alz-AlzUITests/Pods-Alz-AlzUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AsyncSwift/Async.framework
+${PODS_ROOT}/HoundifyPhraseSpotter/HoundifyPhraseSpotter.framework
+${PODS_ROOT}/HoundifySDK/HoundifySDK.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework

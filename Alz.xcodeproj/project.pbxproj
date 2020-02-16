@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01BC9A290094E451436DCEDC /* Pods_Alz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0A94C5EA412AA0B18B4090 /* Pods_Alz.framework */; };
+		6BC7849CAE8EEE9D22708EB9 /* Pods_AlzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C51192F07C2C23261EEEC5 /* Pods_AlzTests.framework */; };
+		9DF2EF0123F7C93C007DCC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0023F7C93C007DCC26 /* AppDelegate.swift */; };
+		9DF2EF0323F7C93C007DCC26 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0223F7C93C007DCC26 /* art.scnassets */; };
+		9DF2EF0523F7C93C007DCC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0423F7C93C007DCC26 /* ViewController.swift */; };
+		9DF2EF0823F7C93C007DCC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0623F7C93C007DCC26 /* Main.storyboard */; };
+		9DF2EF0A23F7C93E007DCC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0923F7C93E007DCC26 /* Assets.xcassets */; };
+		9DF2EF0D23F7C93E007DCC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF2EF0B23F7C93E007DCC26 /* LaunchScreen.storyboard */; };
+		9DF2EF1823F7C93E007DCC26 /* AlzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF1723F7C93E007DCC26 /* AlzTests.swift */; };
+		9DF2EF2323F7C93E007DCC26 /* AlzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF2223F7C93E007DCC26 /* AlzUITests.swift */; };
+		9DF2EF3323F7CA54007DCC26 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF3223F7CA54007DCC26 /* Face.swift */; };
+		9DF2EF3523F7D9B6007DCC26 /* CIImage+FaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF3423F7D9B6007DCC26 /* CIImage+FaceDetection.swift */; };
+		9DF2EF3723F7D9C9007DCC26 /* SCNVector3+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF3623F7D9C9007DCC26 /* SCNVector3+Distance.swift */; };
+		9DF2EF3923F7D9DA007DCC26 /* SCNNode+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF3823F7D9DA007DCC26 /* SCNNode+Text.swift */; };
+		9DF2EF3B23F8541B007DCC26 /* DBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */; };
+		9DF2EF4123F892B2007DCC26 /* treehacks.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF4023F892B1007DCC26 /* treehacks.mlmodel */; };
+		9DF2EF4323F8999F007DCC26 /* VoiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */; };
+		B43F074AEF82814987E035FF /* Pods_Alz_AlzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E80C35D531DF2AEA25FA8EB /* Pods_Alz_AlzUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DF2EF1423F7C93E007DCC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DF2EEF523F7C93C007DCC26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DF2EEFC23F7C93C007DCC26;
+			remoteInfo = Alz;
+		};
+		9DF2EF1F23F7C93E007DCC26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DF2EEF523F7C93C007DCC26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DF2EEFC23F7C93C007DCC26;
+			remoteInfo = Alz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32314D8361FDDEC82015741B /* Pods-Alz-AlzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alz-AlzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Alz-AlzUITests/Pods-Alz-AlzUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F0A94C5EA412AA0B18B4090 /* Pods_Alz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E6470D88DA237005FDC940 /* Pods-AlzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzTests.debug.xcconfig"; path = "Target Support Files/Pods-AlzTests/Pods-AlzTests.debug.xcconfig"; sourceTree = "<group>"; };
+		53D8224C1F708E9D20A47F4B /* Pods-Alz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alz.debug.xcconfig"; path = "Target Support Files/Pods-Alz/Pods-Alz.debug.xcconfig"; sourceTree = "<group>"; };
+		6E80C35D531DF2AEA25FA8EB /* Pods_Alz_AlzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alz_AlzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C871B7CD1868B2013C41ADD /* Pods-Alz-AlzUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alz-AlzUITests.release.xcconfig"; path = "Target Support Files/Pods-Alz-AlzUITests/Pods-Alz-AlzUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89C51192F07C2C23261EEEC5 /* Pods_AlzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF2EEFD23F7C93C007DCC26 /* Alz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF2EF0023F7C93C007DCC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DF2EF0223F7C93C007DCC26 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		9DF2EF0423F7C93C007DCC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DF2EF0723F7C93C007DCC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DF2EF0923F7C93E007DCC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DF2EF0C23F7C93E007DCC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9DF2EF0E23F7C93E007DCC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF2EF1323F7C93E007DCC26 /* AlzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF2EF1723F7C93E007DCC26 /* AlzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzTests.swift; sourceTree = "<group>"; };
+		9DF2EF1923F7C93E007DCC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF2EF1E23F7C93E007DCC26 /* AlzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF2EF2223F7C93E007DCC26 /* AlzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlzUITests.swift; sourceTree = "<group>"; };
+		9DF2EF2423F7C93E007DCC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF2EF3223F7CA54007DCC26 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		9DF2EF3423F7D9B6007DCC26 /* CIImage+FaceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CIImage+FaceDetection.swift"; sourceTree = "<group>"; };
+		9DF2EF3623F7D9C9007DCC26 /* SCNVector3+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Distance.swift"; sourceTree = "<group>"; };
+		9DF2EF3823F7D9DA007DCC26 /* SCNNode+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Text.swift"; sourceTree = "<group>"; };
+		9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBInterface.swift; sourceTree = "<group>"; };
+		9DF2EF4023F892B1007DCC26 /* treehacks.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = treehacks.mlmodel; sourceTree = "<group>"; };
+		9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInterface.swift; sourceTree = "<group>"; };
+		C203F522663E050C7028AAE8 /* Pods-Alz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alz.release.xcconfig"; path = "Target Support Files/Pods-Alz/Pods-Alz.release.xcconfig"; sourceTree = "<group>"; };
+		D11027A12F02233C2E5BF979 /* Pods-AlzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzTests.release.xcconfig"; path = "Target Support Files/Pods-AlzTests/Pods-AlzTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DF2EEFA23F7C93C007DCC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01BC9A290094E451436DCEDC /* Pods_Alz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF2EF1023F7C93E007DCC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC7849CAE8EEE9D22708EB9 /* Pods_AlzTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF2EF1B23F7C93E007DCC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43F074AEF82814987E035FF /* Pods_Alz_AlzUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91A044D6BBDCC58DF1EB8E7E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53D8224C1F708E9D20A47F4B /* Pods-Alz.debug.xcconfig */,
+				C203F522663E050C7028AAE8 /* Pods-Alz.release.xcconfig */,
+				32314D8361FDDEC82015741B /* Pods-Alz-AlzUITests.debug.xcconfig */,
+				7C871B7CD1868B2013C41ADD /* Pods-Alz-AlzUITests.release.xcconfig */,
+				42E6470D88DA237005FDC940 /* Pods-AlzTests.debug.xcconfig */,
+				D11027A12F02233C2E5BF979 /* Pods-AlzTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9DF2EEF423F7C93C007DCC26 = {
+			isa = PBXGroup;
+			children = (
+				9DF2EEFF23F7C93C007DCC26 /* Alz */,
+				9DF2EF1623F7C93E007DCC26 /* AlzTests */,
+				9DF2EF2123F7C93E007DCC26 /* AlzUITests */,
+				9DF2EEFE23F7C93C007DCC26 /* Products */,
+				91A044D6BBDCC58DF1EB8E7E /* Pods */,
+				D94BDA18F5F4DE1C07C766A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9DF2EEFE23F7C93C007DCC26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DF2EEFD23F7C93C007DCC26 /* Alz.app */,
+				9DF2EF1323F7C93E007DCC26 /* AlzTests.xctest */,
+				9DF2EF1E23F7C93E007DCC26 /* AlzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DF2EEFF23F7C93C007DCC26 /* Alz */ = {
+			isa = PBXGroup;
+			children = (
+				9DF2EF0023F7C93C007DCC26 /* AppDelegate.swift */,
+				9DF2EF3223F7CA54007DCC26 /* Face.swift */,
+				9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */,
+				9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */,
+				9DF2EF4023F892B1007DCC26 /* treehacks.mlmodel */,
+				9DF2EF3423F7D9B6007DCC26 /* CIImage+FaceDetection.swift */,
+				9DF2EF0423F7C93C007DCC26 /* ViewController.swift */,
+				9DF2EF3623F7D9C9007DCC26 /* SCNVector3+Distance.swift */,
+				9DF2EF0623F7C93C007DCC26 /* Main.storyboard */,
+				9DF2EF3823F7D9DA007DCC26 /* SCNNode+Text.swift */,
+				9DF2EF0923F7C93E007DCC26 /* Assets.xcassets */,
+				9DF2EF0B23F7C93E007DCC26 /* LaunchScreen.storyboard */,
+				9DF2EF0E23F7C93E007DCC26 /* Info.plist */,
+				9DF2EF0223F7C93C007DCC26 /* art.scnassets */,
+			);
+			path = Alz;
+			sourceTree = "<group>";
+		};
+		9DF2EF1623F7C93E007DCC26 /* AlzTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DF2EF1723F7C93E007DCC26 /* AlzTests.swift */,
+				9DF2EF1923F7C93E007DCC26 /* Info.plist */,
+			);
+			path = AlzTests;
+			sourceTree = "<group>";
+		};
+		9DF2EF2123F7C93E007DCC26 /* AlzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9DF2EF2223F7C93E007DCC26 /* AlzUITests.swift */,
+				9DF2EF2423F7C93E007DCC26 /* Info.plist */,
+			);
+			path = AlzUITests;
+			sourceTree = "<group>";
+		};
+		D94BDA18F5F4DE1C07C766A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F0A94C5EA412AA0B18B4090 /* Pods_Alz.framework */,
+				6E80C35D531DF2AEA25FA8EB /* Pods_Alz_AlzUITests.framework */,
+				89C51192F07C2C23261EEEC5 /* Pods_AlzTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9DF2EEFC23F7C93C007DCC26 /* Alz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DF2EF2723F7C93E007DCC26 /* Build configuration list for PBXNativeTarget "Alz" */;
+			buildPhases = (
+				7802375FFEA3C9BCB7883C61 /* [CP] Check Pods Manifest.lock */,
+				9DF2EEF923F7C93C007DCC26 /* Sources */,
+				9DF2EEFA23F7C93C007DCC26 /* Frameworks */,
+				9DF2EEFB23F7C93C007DCC26 /* Resources */,
+				E300328FB9401F28122CFC2B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alz;
+			productName = Alz;
+			productReference = 9DF2EEFD23F7C93C007DCC26 /* Alz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DF2EF1223F7C93E007DCC26 /* AlzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DF2EF2A23F7C93E007DCC26 /* Build configuration list for PBXNativeTarget "AlzTests" */;
+			buildPhases = (
+				5477987E3E6022056962F430 /* [CP] Check Pods Manifest.lock */,
+				9DF2EF0F23F7C93E007DCC26 /* Sources */,
+				9DF2EF1023F7C93E007DCC26 /* Frameworks */,
+				9DF2EF1123F7C93E007DCC26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DF2EF1523F7C93E007DCC26 /* PBXTargetDependency */,
+			);
+			name = AlzTests;
+			productName = AlzTests;
+			productReference = 9DF2EF1323F7C93E007DCC26 /* AlzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9DF2EF1D23F7C93E007DCC26 /* AlzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DF2EF2D23F7C93E007DCC26 /* Build configuration list for PBXNativeTarget "AlzUITests" */;
+			buildPhases = (
+				43B7D3D4A7C33991CB70C3E0 /* [CP] Check Pods Manifest.lock */,
+				9DF2EF1A23F7C93E007DCC26 /* Sources */,
+				9DF2EF1B23F7C93E007DCC26 /* Frameworks */,
+				9DF2EF1C23F7C93E007DCC26 /* Resources */,
+				2E4740A4EC66746DA3F529B5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DF2EF2023F7C93E007DCC26 /* PBXTargetDependency */,
+			);
+			name = AlzUITests;
+			productName = AlzUITests;
+			productReference = 9DF2EF1E23F7C93E007DCC26 /* AlzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DF2EEF523F7C93C007DCC26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alvin Lin";
+				TargetAttributes = {
+					9DF2EEFC23F7C93C007DCC26 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					9DF2EF1223F7C93E007DCC26 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9DF2EEFC23F7C93C007DCC26;
+					};
+					9DF2EF1D23F7C93E007DCC26 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9DF2EEFC23F7C93C007DCC26;
+					};
+				};
+			};
+			buildConfigurationList = 9DF2EEF823F7C93C007DCC26 /* Build configuration list for PBXProject "Alz" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9DF2EEF423F7C93C007DCC26;
+			productRefGroup = 9DF2EEFE23F7C93C007DCC26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DF2EEFC23F7C93C007DCC26 /* Alz */,
+				9DF2EF1223F7C93E007DCC26 /* AlzTests */,
+				9DF2EF1D23F7C93E007DCC26 /* AlzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DF2EEFB23F7C93C007DCC26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF2EF0323F7C93C007DCC26 /* art.scnassets in Resources */,
+				9DF2EF0D23F7C93E007DCC26 /* LaunchScreen.storyboard in Resources */,
+				9DF2EF0A23F7C93E007DCC26 /* Assets.xcassets in Resources */,
+				9DF2EF0823F7C93C007DCC26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF2EF1123F7C93E007DCC26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF2EF1C23F7C93E007DCC26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E4740A4EC66746DA3F529B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alz-AlzUITests/Pods-Alz-AlzUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alz-AlzUITests/Pods-Alz-AlzUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alz-AlzUITests/Pods-Alz-AlzUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43B7D3D4A7C33991CB70C3E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alz-AlzUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5477987E3E6022056962F430 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlzTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7802375FFEA3C9BCB7883C61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E300328FB9401F28122CFC2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alz/Pods-Alz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Alz/Pods-Alz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Alz/Pods-Alz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9DF2EEF923F7C93C007DCC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF2EF3323F7CA54007DCC26 /* Face.swift in Sources */,
+				9DF2EF0523F7C93C007DCC26 /* ViewController.swift in Sources */,
+				9DF2EF3923F7D9DA007DCC26 /* SCNNode+Text.swift in Sources */,
+				9DF2EF3B23F8541B007DCC26 /* DBInterface.swift in Sources */,
+				9DF2EF3523F7D9B6007DCC26 /* CIImage+FaceDetection.swift in Sources */,
+				9DF2EF3723F7D9C9007DCC26 /* SCNVector3+Distance.swift in Sources */,
+				9DF2EF4323F8999F007DCC26 /* VoiceInterface.swift in Sources */,
+				9DF2EF4123F892B2007DCC26 /* treehacks.mlmodel in Sources */,
+				9DF2EF0123F7C93C007DCC26 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF2EF0F23F7C93E007DCC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF2EF1823F7C93E007DCC26 /* AlzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF2EF1A23F7C93E007DCC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF2EF2323F7C93E007DCC26 /* AlzUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DF2EF1523F7C93E007DCC26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DF2EEFC23F7C93C007DCC26 /* Alz */;
+			targetProxy = 9DF2EF1423F7C93E007DCC26 /* PBXContainerItemProxy */;
+		};
+		9DF2EF2023F7C93E007DCC26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DF2EEFC23F7C93C007DCC26 /* Alz */;
+			targetProxy = 9DF2EF1F23F7C93E007DCC26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9DF2EF0623F7C93C007DCC26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DF2EF0723F7C93C007DCC26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9DF2EF0B23F7C93E007DCC26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DF2EF0C23F7C93E007DCC26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9DF2EF2523F7C93E007DCC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9DF2EF2623F7C93E007DCC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DF2EF2823F7C93E007DCC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D8224C1F708E9D20A47F4B /* Pods-Alz.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UTKJPC59P8;
+				INFOPLIST_FILE = Alz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alvin.Alz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DF2EF2923F7C93E007DCC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C203F522663E050C7028AAE8 /* Pods-Alz.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UTKJPC59P8;
+				INFOPLIST_FILE = Alz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alvin.Alz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9DF2EF2B23F7C93E007DCC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E6470D88DA237005FDC940 /* Pods-AlzTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UTKJPC59P8;
+				INFOPLIST_FILE = AlzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alvin.AlzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alz.app/Alz";
+			};
+			name = Debug;
+		};
+		9DF2EF2C23F7C93E007DCC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D11027A12F02233C2E5BF979 /* Pods-AlzTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UTKJPC59P8;
+				INFOPLIST_FILE = AlzTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alvin.AlzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Alz.app/Alz";
+			};
+			name = Release;
+		};
+		9DF2EF2E23F7C93E007DCC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32314D8361FDDEC82015741B /* Pods-Alz-AlzUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UTKJPC59P8;
+				INFOPLIST_FILE = AlzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alvin.AlzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alz;
+			};
+			name = Debug;
+		};
+		9DF2EF2F23F7C93E007DCC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C871B7CD1868B2013C41ADD /* Pods-Alz-AlzUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UTKJPC59P8;
+				INFOPLIST_FILE = AlzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Alvin.AlzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Alz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9DF2EEF823F7C93C007DCC26 /* Build configuration list for PBXProject "Alz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF2EF2523F7C93E007DCC26 /* Debug */,
+				9DF2EF2623F7C93E007DCC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DF2EF2723F7C93E007DCC26 /* Build configuration list for PBXNativeTarget "Alz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF2EF2823F7C93E007DCC26 /* Debug */,
+				9DF2EF2923F7C93E007DCC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DF2EF2A23F7C93E007DCC26 /* Build configuration list for PBXNativeTarget "AlzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF2EF2B23F7C93E007DCC26 /* Debug */,
+				9DF2EF2C23F7C93E007DCC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DF2EF2D23F7C93E007DCC26 /* Build configuration list for PBXNativeTarget "AlzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF2EF2E23F7C93E007DCC26 /* Debug */,
+				9DF2EF2F23F7C93E007DCC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DF2EEF523F7C93C007DCC26 /* Project object */;
+}

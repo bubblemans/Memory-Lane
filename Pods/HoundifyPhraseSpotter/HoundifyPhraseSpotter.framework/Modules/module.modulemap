@@ -1,0 +1,6 @@
+framework module HoundifyPhraseSpotter {
+  umbrella header "HoundifyPhraseSpotter.h"
+
+  export *
+  module * { export * }
+}

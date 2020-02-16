@@ -1,0 +1,6 @@
+framework module Pods_Alz_AlzUITests {
+  umbrella header "Pods-Alz-AlzUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
