@@ -24,6 +24,7 @@
 		9DF2EF3B23F8541B007DCC26 /* DBInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */; };
 		9DF2EF4123F892B2007DCC26 /* treehacks.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF4023F892B1007DCC26 /* treehacks.mlmodel */; };
 		9DF2EF4323F8999F007DCC26 /* VoiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */; };
+		9DF2EF4523F8CF6D007DCC26 /* HoundDataCommandResult-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2EF4423F8CF6D007DCC26 /* HoundDataCommandResult-Extras.swift */; };
 		B43F074AEF82814987E035FF /* Pods_Alz_AlzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E80C35D531DF2AEA25FA8EB /* Pods_Alz_AlzUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBInterface.swift; sourceTree = "<group>"; };
 		9DF2EF4023F892B1007DCC26 /* treehacks.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = treehacks.mlmodel; sourceTree = "<group>"; };
 		9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceInterface.swift; sourceTree = "<group>"; };
+		9DF2EF4423F8CF6D007DCC26 /* HoundDataCommandResult-Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HoundDataCommandResult-Extras.swift"; sourceTree = "<group>"; };
 		C203F522663E050C7028AAE8 /* Pods-Alz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alz.release.xcconfig"; path = "Target Support Files/Pods-Alz/Pods-Alz.release.xcconfig"; sourceTree = "<group>"; };
 		D11027A12F02233C2E5BF979 /* Pods-AlzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlzTests.release.xcconfig"; path = "Target Support Files/Pods-AlzTests/Pods-AlzTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 				9DF2EF3223F7CA54007DCC26 /* Face.swift */,
 				9DF2EF4223F8999F007DCC26 /* VoiceInterface.swift */,
 				9DF2EF3A23F8541B007DCC26 /* DBInterface.swift */,
+				9DF2EF4423F8CF6D007DCC26 /* HoundDataCommandResult-Extras.swift */,
 				9DF2EF4023F892B1007DCC26 /* treehacks.mlmodel */,
 				9DF2EF3423F7D9B6007DCC26 /* CIImage+FaceDetection.swift */,
 				9DF2EF0423F7C93C007DCC26 /* ViewController.swift */,
@@ -435,6 +438,7 @@
 				9DF2EF3B23F8541B007DCC26 /* DBInterface.swift in Sources */,
 				9DF2EF3523F7D9B6007DCC26 /* CIImage+FaceDetection.swift in Sources */,
 				9DF2EF3723F7D9C9007DCC26 /* SCNVector3+Distance.swift in Sources */,
+				9DF2EF4523F8CF6D007DCC26 /* HoundDataCommandResult-Extras.swift in Sources */,
 				9DF2EF4323F8999F007DCC26 /* VoiceInterface.swift in Sources */,
 				9DF2EF4123F892B2007DCC26 /* treehacks.mlmodel in Sources */,
 				9DF2EF0123F7C93C007DCC26 /* AppDelegate.swift in Sources */,

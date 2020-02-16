@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Hound.setClientID("TD9XmNJEqHlFD5VJD1ATvw==");
-        Hound.setClientKey("-9s2sGw4cdI9i6_WN4C_VvPeU3qPGT9ThSY7owsQ8u_wOUMsgBxWX1yiNr26f2xh6iZzoBQAvn0PZBaCcwA0_Q==");
+        Hound.setClientID("Z6XYZIYcw5NghOFit2iAAQ==");
+        Hound.setClientKey("gvN0aQx7PC-7X_bC-m9LZF3uXnG1YyThoDOSyyJfwIz0uXwAyzI1DkhguSUhzOxDxhOHmO7EjMIyJBA6lyEumg==");
         return true
     }
 
