@@ -14,10 +14,10 @@ struct Link: Codable {
 }
 
 struct Item: Codable {
-    var username: String
-    var dob: String
-    var relation: String
-    var memories: String
+    var username: String?
+    var dob: String?
+    var relation: String?
+    var memories: String?
     var links: [Link]
 }
 
@@ -56,11 +56,11 @@ class DBInterface {
             if let data = data {
                 do {
                     jsonData = try JSONDecoder().decode(Contact.self, from: data)
-//                    print(jsonData)
+                    print(jsonData)
 //                    print(jsonData?.items[0].username)
 //                    print(jsonData?.items[0].relation)
                 } catch {
-                    print("Caught error")
+                    print("retrieveContactInfo Caught error")
                 }
             }
             

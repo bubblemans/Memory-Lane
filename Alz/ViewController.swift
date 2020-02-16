@@ -82,7 +82,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         }
     }
     
-    let model: VNCoreMLModel = try! VNCoreMLModel(for: treehacks().model)
+    let model: VNCoreMLModel = try! VNCoreMLModel(for: advanced().model)
     var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
     var faces: [Face] = []
     var 👜 = DisposeBag()
@@ -689,7 +689,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
                 confidence: \(second.confidence) for \(second.identifier)
                 
                 """)
-            if person.confidence < 0.95 || person.identifier == "unknown" {
+            if person.confidence < 0.5 || person.identifier == "unknown" {
                 print("not so sure")
                 return
             }

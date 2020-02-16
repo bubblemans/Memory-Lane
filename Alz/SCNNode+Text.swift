@@ -14,6 +14,8 @@ import HoundifySDK
 
 public extension SCNNode {
     convenience init(withText text : String, position: SCNVector3) {
+        self.init()
+        if text == "Negative" { return }
         let bubbleDepth : Float = 0.01 // the 'depth' of 3D text
         
         // TEXT BILLBOARD CONSTRAINT
@@ -23,7 +25,7 @@ public extension SCNNode {
         // BUBBLE-TEXT
         let bubble = SCNText(string: text, extrusionDepth: CGFloat(bubbleDepth))
         bubble.font = UIFont(name: "Futura", size: 0.08)?.withTraits(traits: .traitBold)
-        bubble.alignmentMode = CATextLayerAlignmentMode.center.rawValue
+        bubble.alignmentMode = CATextLayerAlignmentMode.left.rawValue
         bubble.firstMaterial?.diffuse.contents = UIColor.orange
         bubble.firstMaterial?.specular.contents = UIColor.white
         bubble.firstMaterial?.isDoubleSided = true
@@ -38,27 +40,27 @@ public extension SCNNode {
         bubbleNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         bubbleNode.simdPosition = simd_float3.init(x: 0.05, y: 0.04, z: 0)
         
-        // get the relation
-        
+        // get the relation and dob
         var relation = ""
+        var dob = ""
         if let jsonData = jsonData {
             for contact in jsonData.items {
                 print("contact: ", contact.username, "text ", text)
-                if contact.username == text {
-                    relation = contact.relation
+                if let username = contact.username, let rela = contact.relation, let dateOfBirth = contact.dob {
+                    if username == text {
+                        relation = rela
+                        dob = dateOfBirth
+                    }
                 }
             }
         }
-        print("realtion", relation)
-        
-        
         
         // DETAIL-TEXT
-        let detailInfoText = SCNText(string: relation, extrusionDepth: CGFloat(bubbleDepth))
+        let detailInfoText = SCNText(string: "Relation: "+relation, extrusionDepth: CGFloat(bubbleDepth))
         detailInfoText.isWrapped = true
         detailInfoText.font = UIFont(name: "Futura", size: 0.08)?.withTraits(traits: .traitBold)
 //        detailInfoText.containerFrame = CGRect(origin: .zero, size: CGSize(width: 100, height: 500))
-        detailInfoText.alignmentMode = CATextLayerAlignmentMode.center.rawValue
+        detailInfoText.alignmentMode = CATextLayerAlignmentMode.left.rawValue
         detailInfoText.firstMaterial?.diffuse.contents = UIColor.blue
         detailInfoText.firstMaterial?.specular.contents = UIColor.white
         detailInfoText.firstMaterial?.isDoubleSided = true
@@ -73,15 +75,26 @@ public extension SCNNode {
         detailNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         detailNode.simdPosition = simd_float3.init(x: 0.05, y: 0.02, z: 0)
         
-        // IMAGE NODE
-//        let material = SCNMaterial()
-//        material.diffuse.contents = UIImage.init(named: text)
-//        material.isDoubleSided = true
-//        let box = SCNBox.init(width: 0.5, height: 0.5, length: 0.01, chamferRadius: 0)
-//        let boxNode = SCNNode(geometry: box)
-//        box.firstMaterial = material
-//        boxNode.scale = SCNVector3Make(0.1, 0.1, 0.1)
-//        boxNode.simdPosition = simd_float3.init(x: 0.05, y: 0, z: 0)
+        // DETAIL-TEXT
+        let dobText = SCNText(string: "DOB: "+dob, extrusionDepth: CGFloat(bubbleDepth))
+        dobText.isWrapped = true
+        dobText.font = UIFont(name: "Futura", size: 0.08)?.withTraits(traits: .traitBold)
+//        detailInfoText.containerFrame = CGRect(origin: .zero, size: CGSize(width: 100, height: 500))
+        dobText.alignmentMode = CATextLayerAlignmentMode.left.rawValue
+        dobText.firstMaterial?.diffuse.contents = UIColor.blue
+        dobText.firstMaterial?.specular.contents = UIColor.white
+        dobText.firstMaterial?.isDoubleSided = true
+        dobText.chamferRadius = CGFloat(bubbleDepth)
+                
+        // DETAIL NODE
+        let (minBoundDOB, maxBoundDOB) = bubble.boundingBox
+        let dobNode = SCNNode(geometry: dobText)
+        // Centre Node - to Centre-Bottom point
+        dobNode.pivot = SCNMatrix4MakeTranslation( (maxBoundDetail.x - minBoundDetail.x)/2, minBoundDetail.y, bubbleDepth/2)
+        // Reduce default text size
+        dobNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
+        dobNode.simdPosition = simd_float3.init(x: 0.05, y: 0, z: 0)
+        
         
         // CENTRE POINT NODE
         let sphere = SCNSphere(radius: 0.004)
@@ -89,8 +102,8 @@ public extension SCNNode {
         let sphereNode = SCNNode(geometry: sphere)
         sphereNode.opacity = 0.6
         
-        self.init()
 //        addChildNode(boxNode)
+        addChildNode(dobNode)
         addChildNode(detailNode)
         addChildNode(bubbleNode)
         addChildNode(sphereNode)
