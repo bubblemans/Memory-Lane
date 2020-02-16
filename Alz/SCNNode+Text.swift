@@ -90,7 +90,7 @@ public extension SCNNode {
         let (minBoundDOB, maxBoundDOB) = bubble.boundingBox
         let dobNode = SCNNode(geometry: dobText)
         // Centre Node - to Centre-Bottom point
-        dobNode.pivot = SCNMatrix4MakeTranslation( (maxBoundDetail.x - minBoundDetail.x)/2, minBoundDetail.y, bubbleDepth/2)
+        dobNode.pivot = SCNMatrix4MakeTranslation( (maxBoundDOB.x - minBoundDOB.x)/2, minBoundDOB.y, bubbleDepth/2)
         // Reduce default text size
         dobNode.scale = SCNVector3Make(0.2, 0.2, 0.2)
         dobNode.simdPosition = simd_float3.init(x: 0.05, y: 0, z: 0)

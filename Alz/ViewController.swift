@@ -17,6 +17,8 @@ import HoundifySDK
 class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQueryDelegate {
     private var query: HoundVoiceSearchQuery?
     
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var medView: UIView!
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var menuBar: UIView!
     @IBOutlet weak var searchButton: UIButton!
@@ -33,6 +35,21 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var medImage: UIImageView!
     
+    @IBAction func handleSubmit(_ sender: UIButton) {
+        print("submit")
+        perform(#selector(showAlert), with: nil, afterDelay: 2)
+    }
+    @objc func showAlert() {
+        let alert = UIAlertController(title: "Time to Take Medicine", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK, thank you!", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    @IBAction func handleBack(_ sender: UIButton) {
+        print("back")
+        UIView.animate(withDuration: 0.2) {
+            self.medView.frame.origin.y = 900
+        }
+    }
     @IBAction func swipeMenu(_ sender: UIPanGestureRecognizer) {
         node.scale = SCNVector3(0, 0, 0)
         if sender.state == .began || sender.state == .changed {
@@ -89,6 +106,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
     var db = DBInterface()
     var voiceInterface = VoiceInterface()
     
+    @objc func dismissKeyboard() {
+        medView.endEditing(true)
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        medView.addGestureRecognizer(tap)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // hard code to get the contact info first
@@ -142,24 +169,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         self.menuBar.frame.origin.x = -333
         self.menuBar.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
+        self.medView.frame.origin.y = 900
+        
         // menu buttons
         userImage.image = UIImage(named: "user")
         userImage.isUserInteractionEnabled = true
-//        userImage.target(forAction: #selector(handleUser), withSender: self)
-//        userImage.add
-//        userButton.setTitle("User", for: .normal)
-//        userButton.setTitleColor(.white, for: .normal)
-//        userButton.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
-//        userButton.layer.cornerRadius = 15
 
         medImage.image = UIImage(named: "drug")
         medImage.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         medImage.addGestureRecognizer(tapGestureRecognizer)
-//        medButton.setTitle("Medicine", for: .normal)
-//        medButton.setTitleColor(.white, for: .normal)
-//        medButton.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
-//        medButton.layer.cornerRadius = 15
         
         instructionLabel.textAlignment = .left
         instructionLabel.lineBreakMode = .byWordWrapping
@@ -170,12 +189,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         say the name you see to find out more.
         ex: say \"Alvin\"
         """
+        
+        backButton.setTitle("Back", for: .normal)
+        
+        hideKeyboardWhenTappedAround()
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         // And some actions
         print("med")
+        UIView.animate(withDuration: 0.2) {
+            self.medView.frame.origin.y = 0
+        }
     }
     
     
@@ -828,5 +854,17 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         }
         
         return CGRect(origin: origin, size: size)
+    }
+}
+
+extension UIView {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIView.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.endEditing(true)
     }
 }
