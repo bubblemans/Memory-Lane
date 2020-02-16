@@ -40,15 +40,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         // Set the view's delegate
         sceneView.delegate = self
         
-        searchButton.layer.cornerRadius = 5
-        searchButton.backgroundColor = .red
+        searchButton.layer.cornerRadius = 10
+//        searchButton.backgroundColor = .blue
         searchButton.setTitle("Search", for: .normal)
         searchButton.setTitleColor(.white, for: .normal)
         
-        listeningButton.layer.cornerRadius = 5
-//        listeningButton.backgroundColor = .red
+        listeningButton.layer.cornerRadius = 10
+//        listeningButton.backgroundColor = .blue
         listeningButton.setTitle("Enable", for: .normal)
-//        listeningButton.setTitleColor(.white, for: .normal)
+        listeningButton.setTitleColor(.white, for: .normal)
         
         
         // Show statistics such as fps and timing information
@@ -164,8 +164,10 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
             if let error = error {
 //                self.updateText = error.localizedDescription
                 self.listeningButton.isEnabled = false
+                self.listeningButton.setTitleColor(.gray, for: .normal)
             } else {
                 self.listeningButton.isEnabled = true
+                self.listeningButton.setTitleColor(.white, for: .normal)
             }
         })
     }
@@ -571,7 +573,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
                 confidence: \(second.confidence) for \(second.identifier)
                 
                 """)
-            if person.confidence < 0.60 || person.identifier == "unknown" {
+            if person.confidence < 0.90 || person.identifier == "unknown" {
                 print("not so sure")
                 return
             }
