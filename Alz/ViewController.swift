@@ -19,10 +19,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
     
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var listeningButton: UIButton!
-    
-    let textView = UITextView()
-
     @IBOutlet var sceneView: ARSCNView!
+    let textView = UITextView()
+    let remindLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
     let model: VNCoreMLModel = try! VNCoreMLModel(for: treehacks().model)
     var bounds: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
     var faces: [Face] = []
@@ -42,13 +45,45 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
         
         searchButton.layer.cornerRadius = 10
 //        searchButton.backgroundColor = .blue
-        searchButton.setTitle("Search", for: .normal)
+        searchButton.setTitle("Speak", for: .normal)
         searchButton.setTitleColor(.white, for: .normal)
         
         listeningButton.layer.cornerRadius = 10
 //        listeningButton.backgroundColor = .blue
         listeningButton.setTitle("Enable", for: .normal)
         listeningButton.setTitleColor(.white, for: .normal)
+        
+//        if let window = UIApplication.shared.keyWindow {
+//            remindLabel.text = "Click \"Enable\" first, and click \"Speak\" to speak"
+//            remindLabel.font.withSize(6)
+//            remindLabel.numberOfLines = 2
+//            remindLabel.frame = CGRect(x: 10, y: 1000, width: 200, height: 30)
+//            remindLabel.backgroundColor = .white
+//            window.addSubview(remindLabel)
+//
+//            UIView.animate(withDuration: 0.4) {
+//                self.remindLabel.frame = CGRect(x: 10, y: 800, width: 200, height: 30)
+//            }
+//        }
+        
+        let text = SCNText(string: "Click \"Enable\" first, and click \"Speak\" to speak", extrusionDepth: 1)
+       let material = SCNMaterial()
+       material.diffuse.contents = UIColor.orange
+       text.materials = [material]
+       text.flatness = 0
+       text.font = .boldSystemFont(ofSize: 8)
+
+       let node = SCNNode()
+       let width = Double(view.frame.width)
+       let height = Double(view.frame.height)
+       node.position = SCNVector3(-0.5, -1, -1)
+       node.scale = SCNVector3(0.01, 0.01, 0.01)
+
+       node.geometry = text
+
+       sceneView.scene.rootNode.addChildNode(node)
+       sceneView.automaticallyUpdatesLighting = true
+        
         
         
         // Show statistics such as fps and timing information
@@ -573,7 +608,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, HoundVoiceSearchQuery
                 confidence: \(second.confidence) for \(second.identifier)
                 
                 """)
-            if person.confidence < 0.90 || person.identifier == "unknown" {
+            if person.confidence < 0.95 || person.identifier == "unknown" {
                 print("not so sure")
                 return
             }
